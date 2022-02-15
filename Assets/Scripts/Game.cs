@@ -37,6 +37,7 @@ public class Game : MonoBehaviour
         versusText.text = PhotonNetwork.LocalPlayer.NickName + " VS " + PhotonNetwork.PlayerListOthers[0].NickName;
         if (PhotonNetwork.IsMasterClient)
         {
+        //is host aka is red
             myClr = Color.red;
             theirClr = Color.green;
             clr1.color = myClr;
@@ -46,6 +47,7 @@ public class Game : MonoBehaviour
         }
         else
         {
+        //is not masterclient aka host in photon
             myClr = Color.green;
             theirClr = Color.red;
             clr1.color = theirClr;
